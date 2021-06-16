@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   // res.render('index1');
 
-  const process = spawn('python', ['./datasciencepoject.py']);
+  const process = spawn('python', ['./setup.py']);
 
   process.stdout.on('data', (data) => {
     const myData = data.toString();
@@ -46,7 +46,7 @@ app.post('/', (req, res) => {
   const bedrooms = bedroomNumber;
 
   const process = spawn('python', [
-    './datasciencepoject.py',
+    './setup.py',
     property_type,
     location,
     city,
