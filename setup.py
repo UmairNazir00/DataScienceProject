@@ -1,6 +1,16 @@
+import sys
+import subprocess
+
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+'pandas'])
+
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+'numpy'])
+
+
+
 import pandas as pd
 import numpy as np
-import sys
 
 df1 = pd.read_csv("modifiedPropertyDataset.csv")
 locations = df1.location.unique()
