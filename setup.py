@@ -1,14 +1,3 @@
-import sys
-import subprocess
-
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-'pandas'])
-
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-'numpy'])
-
-
-
 import pandas as pd
 import numpy as np
 
