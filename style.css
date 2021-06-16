@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to left bottom,
+    #051937,
+    #004d7a,
+    #008793,
+    #004d7a,
+    #051937
+  );
+
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: rgb(233, 233, 233);
+  text-shadow: 0 3px black;
+}
+
+.container {
+  overflow: hidden;
+  min-height: 100vh;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+h1,
+span {
+  padding: 0.8rem 0;
+  font-size: 1.618rem;
+}
+
+span {
+  color: #ffffffd2;
+}
+
+.heading h1 {
+  font-size: 3.236rem;
+  padding-bottom: 3rem;
+}
+
+.side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.down {
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  outline: none;
+  border: none;
+  display: inline-block;
+  width: 30%;
+}
+
+.down:hover {
+  color: #00bf72;
+  cursor: pointer;
+}
+
+label {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
+.big {
+  width: 22px;
+  height: 22px;
+  margin: 0px 10px;
+}
+
+.write:hover {
+  cursor: text;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.7rem;
+  border: 3px solid #00bf72;
+  background-color: transparent;
+  color: rgb(214, 214, 214);
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background: #00bf72;
+}
+
+.result h1 {
+  font-size: 3.236rem;
+}

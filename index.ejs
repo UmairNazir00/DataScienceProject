@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Price Prediction</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="/" method="post">
+      <div class="container">
+        <div class="heading">
+          <h1>Predict Property Price</h1>
+        </div>
+
+        <div class="side">
+          <h1>Property Type</h1>
+          <select class="down" name="propertyType">
+            <option name="House" selected="selected">House</option>
+            <option name="Flat">Flat</option>
+            <option name="Upper Portion">Upper Portion</option>
+            <option name="Lower Portion">Lower Portion</option>
+            <option name="Farm House">Farm House</option>
+            <option name="Penthouse">Penthouse</option>
+          </select>
+        </div>
+
+        <div class="side">
+          <h1>Province</h1>
+          <select class="down" name="provinceName">
+            <option name="Punjab" selected="selected">Punjab</option>
+            <option name="Islamabad Capital">Islamabad Capital</option>
+            <option name="Sindh">Sindh</option>
+          </select>
+        </div>
+
+        <div class="side">
+          <h1>City</h1>
+          <select class="down" name="cityName">
+            <option name="Lahore" selected="selected">Lahore</option>
+            <option name="Karachi">Karachi</option>
+            <option name="Islamabad">Islamabad</option>
+            <option name="Rawalpindi">Rawalpindi</option>
+            <option name="Faisalabad">Faisalabad</option>
+          </select>
+        </div>
+
+        <div class="side">
+          <h1>Location</h1>
+          <select class="down" name="locationName">
+            <% var loc = locations; loc.forEach((value) => { if (value ==
+            "other"){ return false; }%>
+            <option><%= value %></option>
+            <%})%>
+          </select>
+        </div>
+
+        <div class="side">
+          <h1>Area (Marla)</h1>
+          <input
+            type="text"
+            name="areaMarla"
+            id="areaMarla"
+            value="1"
+            class="down write"
+          />
+        </div>
+
+        <div class="side">
+          <h1>Bedrooms</h1>
+          <div class="radioBtn">
+            <input
+              type="radio"
+              class="big"
+              id="radio-bed-1"
+              name="bed"
+              value="1"
+            />
+            <label for="radio-bed-1">1</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bed-2"
+              name="bed"
+              value="2"
+              checked
+            />
+            <label for="radio-bed-2">2</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bed-3"
+              name="bed"
+              value="3"
+            />
+            <label for="radio-bed-3">3</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bed-4"
+              name="bed"
+              value="4"
+            />
+            <label for="radio-bed-4">4</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bed-5"
+              name="bed"
+              value="5"
+            />
+            <label for="radio-bed-5">5</label>
+          </div>
+        </div>
+
+        <div class="side">
+          <h1>Bathrooms</h1>
+          <div class="radioBtn">
+            <input
+              type="radio"
+              class="big"
+              id="radio-bath-1"
+              name="bath"
+              value="1"
+            />
+            <label for="radio-bath-1">1</label>
+            <input
+              type="radio"
+              id="radio-bath-2"
+              name="bath"
+              value="2"
+              checked
+              class="big"
+            />
+            <label for="radio-bath-2">2</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bath-3"
+              name="bath"
+              value="3"
+            />
+            <label for="radio-bath-3">3</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bath-4"
+              name="bath"
+              value="4"
+            />
+            <label for="radio-bath-4">4</label>
+            <input
+              type="radio"
+              class="big"
+              id="radio-bath-5"
+              name="bath"
+              value="5"
+            />
+            <label for="radio-bath-5">5</label>
+          </div>
+        </div>
+
+        <div class="side">
+          <h1>Purpose</h1>
+          <select class="down" name="purpose">
+            <option name="For Sale" selected="selected">For Sale</option>
+            <option name="For Rent">For Rent</option>
+          </select>
+        </div>
+
+        <div class="side">
+          <button class="btn" type="submit">Estimate Price</button>
+          <div class="result">
+            <h1><%= price %> PKR</h1>
+          </div>
+        </div>
+
+        <div class="side">
+          <div class="report">
+            <h3>
+              <% if(data == 0){ %> ... <% }else{ %><span>Report :</span> You
+              Select <%= area_marla %> Marla <%= property_type %> with <%=
+              bedrooms %> Bedrooms and <%= baths %> Bathrooms in <%= location
+              %>, <%= city %>, <%= province_name %> <%= purpose %> purpose in
+              <%= price %> Pakistani Rupess<% } %>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
